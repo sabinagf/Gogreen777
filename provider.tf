@@ -1,0 +1,18 @@
+terraform {
+  cloud {
+    organization = "terraform_class990"
+
+    workspaces {
+      name = "gogreenproject"
+    }
+  }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+provider "aws" {
+  region = "us-west-2"
+}
